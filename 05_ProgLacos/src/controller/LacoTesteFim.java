@@ -2,26 +2,27 @@ package controller;
 
 import util.Teclado;
 
-public class LacoTesteInicio {
+public class LacoTesteFim {
 	/*
-	 * Criar um programa que faça multiplicação usando laço de repetição
+	 * Algoritimo para pedir a leitura de um valor para a variavel x, multiplicar
+	 * este valor por 3, colocar o valor obtido na variavel r, e apresentar o valor
+	 * de r, repetindo a sequencia cinco vezes
 	 */
-
 	public static void main(String[] args) {
 		
 		int x, r, contador;
 		
-		contador = 1;
-		// contador = 10; // Se fosse utilizado o do while funcionaria, pois while vem após os dados da variaveis declaradas
+		contador = 10;
 		
-		while (contador <=5) {
+		do {
 			x = Teclado.lerInt("Informe um número: ");
 			r = x * 3;
 			
 			System.out.println(x + " multiplicado por 3 = " + r);
 			
 			contador++;
-		}
+		} while (contador <=5);
+
 
 	}
 
