@@ -12,14 +12,16 @@ public class Exercicio_07 {
 
 	public static void main(String[] args) {
 
-		int i,calculo;
+		int i = 1,calculo;
 
-		for (i = 1; i <= 200; i++) {
+		while (i < 200) {
 			
 			calculo = (i % 4);
 			if (calculo == 0) {
 				System.out.println(i + " é divisível por 4");
 			}
+			
+			i++;
 			
 		}
 	}
