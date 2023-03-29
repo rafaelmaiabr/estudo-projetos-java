@@ -16,6 +16,7 @@ public class Exercicio_04 {
 		String sigla, mensagem = "";
 		
 		sigla = Teclado.lerTexto("Digite a sigla so seu estado");
+		sigla = sigla.toLowerCase();
 		
 				
 		switch (sigla) {
