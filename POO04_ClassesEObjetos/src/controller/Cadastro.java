@@ -7,6 +7,9 @@ public class Cadastro {
 
 	public static void main(String[] args) {
 		
+		Carro kombi = new Carro("VW", "Kombi 1.6", "Branca", 2000);
+		
+		
 		//Instanciando Objeto
 		Carro hach = new Carro();
 		hach.fabricante = "Fiat";
