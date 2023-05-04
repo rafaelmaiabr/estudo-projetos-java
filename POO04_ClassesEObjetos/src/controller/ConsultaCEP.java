@@ -1,34 +1,38 @@
 package controller;
 
+import java.net.URI;
+import java.net.http.HttpClient;
+import java.net.http.HttpRequest;
+import java.net.http.HttpResponse;
+import java.time.Duration;
+
+import util.Teclado;
+
 public class ConsultaCEP {
 
 	public static void main(String[] args) throws Exception {
 		
-		byte a = 127;
+		String cep;
 		
-		int num = 2147483647;
+		cep = Teclado.lerTexto("Digite o CEP?");
 		
-		// Necessita do L no final quando o número passa do limite de um valor int
-		long grande = 214748364857576576L;
-		
-		// Necessário inserir F no final
-		float f = 112.7F;
-		
-		double d = 1.59; 
-		
-		// Caracter unicode declarado com em aspas simples
-		char c = 'A';
-		
-		// Verdadeiro ou falso - true / false
-		boolean b = true;
+		final String URL_GET = "https://brasilapi.com.br/api/cep/v2/"+cep;
 
-		// Exemplos
-		b = 1 > a;
-		if (b) {
-			System.out.println("Correto");
-		}else {
-			System.out.println("Incorreto");			
-		}
-
+		// cliente HTTP
+		HttpClient client = HttpClient.newHttpClient();
+		
+		// criar a requisição
+		HttpRequest request = HttpRequest.newBuilder()
+				.GET()
+				.timeout(Duration.ofSeconds(10))
+				.uri(URI.create(URL_GET))
+				.build();
+		
+		// enviando uma solicitação
+	HttpResponse<String> response = client.send(request,HttpResponse.BodyHandlers.ofString());
+	
+	//imprime o conteúdo recebido
+	System.out.println("Status: " + response.statusCode());
+	System.out.println("Resultado: " + response.body());
 	}
 }
