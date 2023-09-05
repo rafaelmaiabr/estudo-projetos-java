@@ -1,6 +1,6 @@
 package model;
 
-public class VideoGame {
+public class VideoGame extends Jogo {
 	private String paisDeOrigem;
 	private String modelo;
 	/**

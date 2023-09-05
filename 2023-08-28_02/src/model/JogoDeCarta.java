@@ -1,6 +1,6 @@
 package model;
 
-public class JogoDeCarta {
+public class JogoDeCarta extends Jogo {
 	private int qtdeCartas;
 
 	/**

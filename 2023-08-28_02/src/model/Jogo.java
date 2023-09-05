@@ -1,11 +1,18 @@
 package model;
 
-public class Jogo {
+public class Jogo extends Fornecedor{
 	private String nomeJogo;
 	private String categoria;
 	private Fornecedor fornecedor;
 	private char genero;
 	private float preco;
+	
+	
+	public Jogo() {
+		super();	
+	}
+	
+	
 	/**
 	 * @return the nomeJogo
 	 */
@@ -30,12 +37,8 @@ public class Jogo {
 	public void setCategoria(String categoria) {
 		this.categoria = categoria;
 	}
-	/**
-	 * @return the fornecedor
-	 */
-	public Fornecedor getFornecedor() {
-		return fornecedor;
-	}
+
+	
 	/**
 	 * @param fornecedor the fornecedor to set
 	 */
