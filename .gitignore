@@ -1,0 +1,20 @@
+# Arquivos e diretórios específicos do Eclipse
+.project
+.classpath
+.settings/
+
+# Diretório de saída binário (pode variar dependendo das configurações do projeto)
+/bin/
+
+# Logs e arquivos temporários
+*.log
+*.swp
+
+# Arquivos de configuração do usuário do Eclipse
+*.prefs
+
+# Arquivos de configuração do workspace do Eclipse
+.metadata/
+
+# .m2/
+# .gradle/
