@@ -2,7 +2,8 @@
  * 
  */
 /**
- * 
+ * @author rafael.maia
+ *
  */
-module CRUD_Rafael2 {
+module CRUD_Aluno {
 }
