@@ -1,24 +1,15 @@
 package model;
 
 public class PessoaJuridica extends Pessoa {
-	private int cnpj;
-	
-	public PessoaJuridica() {
-		super();
-	}
-	
-	public PessoaJuridica(int cnpj, String nome) {
-		super();
-		this.cnpj = cnpj;
-		
-	}
+    private int cnpj;
 
-	public int getCpf() {
-		return cnpj;
-	}
+    public PessoaJuridica(String nome, int cnpj) {
+        super(nome);
+        this.cnpj = cnpj;
+    }
 
-	public void setCpf(int cnpj) {
-		this.cnpj = cnpj;
-	}
-	
+    public int getCnpj() {
+        return cnpj;
+    }
 }
+
